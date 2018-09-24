@@ -1,0 +1,12 @@
+[package]
+name = "hash_test"
+version = "0.1.0"
+authors = ["Gabe Rudy <rudy@goldenhelix.com>"]
+
+[dependencies]
+docopt = "1"
+libc = "0.2.43"
+fnv = "1.0.3"
+
+[build-dependencies]
+cc = "1.0"
