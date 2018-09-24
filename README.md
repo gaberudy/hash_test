@@ -1,17 +1,18 @@
 **Goal:
 [klib](http://attractivechaos.github.io/klib/#Khash%3A%20generic%20hash%20table)
-has is a C macro-based fast hash data structure called khash. This is heavily
-used in bioinformatic algorithms like the short-read aligner
-[BWA-MEM](https://github.com/lh3/bwa/tree/mem). This project uses the
+is a C macro-based fast data structure library including a hash map called
+khash. This is heavily used in bioinformatic algorithms like the short-read
+aligner [BWA-MEM](https://github.com/lh3/bwa/tree/mem). This project uses the
 [benchmark](https://attractivechaos.wordpress.com/2008/10/07/another-look-at-my-old-benchmark/)
 used by the klib author (Heng Li) to compare kash to the Rust
 `std::collections::HashMap`.**
 
 ## Getting started
 
-    git clone https://github.com/ gaberudy/hash_test.git
+    git clone https://github.com/gaberudy/hash_test.git
     cd hash_test
     cargo build --release
+    ./target/release/hash_test --help
     ./target/release/hash_test
 
 ## Benchmark
