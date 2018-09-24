@@ -33,7 +33,13 @@ specific benchmark. I’m thinking the klib/khash may have a couple advantages:
 
 1. Hash function speed. Although I tried various hash functions, and I don’t
    believe they are the bottleneck, I didn’t yet implement the khash function in
-   rust (or in C and link it in).
+   rust (or in C and link it in). The current benchmarks are run using
+   `FnvHashMap` from the `fnv` crate, which uses the HashMap data structure and
+   its ability to specify a different hash function (the default is
+   cryptographically secure and fnv is also used heavily in rustc). I also
+   tested every hash functin in the
+   [fasthash](https://docs.rs/fasthash/0.3.2/fasthash/) create, and none did
+   better than `fnv` for this bechmark.
 
 2. Data types used for keys. Rust use u64 as the output of the hash functions
    and thus the data type for the HashMap keys. Khash is using C “int” (32-bit).
